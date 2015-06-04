@@ -1,0 +1,39 @@
+<?php
+
+$archivologs="logs.dar";
+$manejador= fopen($archivologs, "r");
+echo '<table width=100% border=1px>';
+
+while ($datos=fgetcsv($manejador,1000000,"|")) {
+	
+	$marcartiempo=$datos[0];
+	$anio=$datos[1];
+	$mes=$datos[2];
+	$dia=$datos[3];
+	$hora=$datos[4];
+	$minuto=$datos[5];
+	$segundo=$datos[6];
+	$navegador=$datos[7];
+	$ip=$datos[8];
+
+echo '
+
+<tr>
+   <td border="1">'.$marcartiempo.'</td>
+   <td border="1">'.$anio.'</td>
+   <td border="1">'.$mes.'</td>
+   <td border="1">'.$dia.'</td>
+   <td border="1">'.$hora.'</td>
+   <td border="1">'.$minuto.'</td>
+   <td border="1">'.$segundo.'</td>
+   <td border="1">'.$navegador.'</td>
+   <td border="1">'.$ip.'</td>
+</tr>
+
+
+';
+}
+
+echo '</table>';
+fclose($manejador);
+?>
