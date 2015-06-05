@@ -5,7 +5,7 @@ session_start();
 
 echo "tu usuario es:";
 echo $_SESSION['usuario'];
-echo "<br>tu contrasena es:";
+echo "<br>tu contraseña es:";
 echo $_SESSION['contraseña'];
 
 //crear conexion
