@@ -14,7 +14,7 @@ echo $_SESSION['contraseña'];
 
 //establecer consulta
 
-$consultar="SELECT * FROM favoritos WHERE usuario='admin' AND contraseña='1234';";
+$consultar="SELECT * FROM favoritos WHERE usuario='diana' AND contraseña='123'";
 
 //ejecutar consulta 
 $resultado=$conexion-> query($consultar);
@@ -33,7 +33,8 @@ echo "<table border=1 width=100>
 
 foreach ($resultado as $fila) {
 	
-	echo "<tr><td>".$fila['titulo']."</td><td>".$fila['direccion']."</td><td>".$fila['categoria']."</td><td>".$fila['comentario']."</td><td>".$fila['valoracion']."</td><td> <a href = 'eliminrfavorito.php?titulo=".$fila['titulo']."&direccion=".$fila['direccion']."&categoria=".$fila['categoria']."&comentario=".$fila['comentario']."&valoracion=".$fila['valoracion']."'>Eliminar</a></td><td><a href = 'actualizarfavorito.php?titulo=".$fila['titulo']."&direccion=".$fila['direccion']."&categoria=".$fila['categoria']."&comentario=".$fila['comentario']."&valoracion=".$fila['valoracion']."'>Actualizar</a></td></tr>";
+	echo "<tr><td>".$fila['titulo']."</td><td>".$fila['direccion']."</td><td>".$fila['categoria']."</td><td>".$fila['comentario']."</td><td>".$fila['valoracion']."</td><td><a href = 'eliminrfavorito.php?titulo=".$fila['titulo']."&direccion=".$fila['direccion']."&categoria=".$fila['categoria']."&comentario=".$fila['comentario']."&valoracion=".$fila['valoracion']."'>Eliminar</a>
+	</td><td><a href = 'formularioactualizar.php?titulo=".$fila['titulo']."&direccion=".$fila['direccion']."&categoria=".$fila['categoria']."&comentario=".$fila['comentario']."&valoracion=".$fila['valoracion']."'>Actualizar</a></td></tr>";
 }
 
 //añadir registro

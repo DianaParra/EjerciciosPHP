@@ -42,8 +42,8 @@ $conexion=NULL;
 $consultar=
 
 
-"INSERT INTO favoritos values ('admin','1234','google','www.youtube.com','tecnologia','bienvenidos aqui','10');
-INSERT INTO favoritos values ('admin','1234','google','www.google.com','tecnologia','bienvenidos aqui','10');
+"INSERT INTO favoritos values ('diana','123','google','www.youtube.com','tecnologia','bienvenidos aqui','10');
+
 ";
 
 //insertar
