@@ -1,11 +1,13 @@
 <?php
+
 session_start();
+
 $codigo=$_SESSION['permisos'];
 
 if ($codigo==1) {
 
-	echo "pulsa <a href='verlogs.php'>Aqui</a>para ver logs<br/>";
-	echo "pulsa <a href='gestionusuario.php'>Aqui</a>para gestionar los usuarios <br/>";
+	echo "pulsa <a href='verlogs.php'>  Aqui  </a> para ver logs<br/>";
+	echo "pulsa <a href='gestionusuario.php'>  Aqui  </a> para gestionar los usuarios <br/>";
 	
 }else{
 

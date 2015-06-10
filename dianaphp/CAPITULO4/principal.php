@@ -8,7 +8,7 @@ echo $_SESSION['usuario'];
 echo "<br>tu contraseña es:";
 echo $_SESSION['contraseña'];
 
-echo "<br>pulsa <a href='unlog.php'>aqui</a>para cerrar tu secion<br/>";
+echo "<br>pulsa <a href='unlog.php'> aqui </a>para cerrar tu secion<br><br/>";
 
 //crear conexion
  $conexion= new PDO('sqlite:favoritos.db');

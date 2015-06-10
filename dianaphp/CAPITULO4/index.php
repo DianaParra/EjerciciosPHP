@@ -20,6 +20,7 @@ if (isset($_SESSION['usuario'])) {
 ';
 
 }else{
+	
 echo '
 
 <html>
