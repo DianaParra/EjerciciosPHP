@@ -73,7 +73,7 @@ echo "algunos link  de la categoria ".$damecategoria."que quizas te puedan inter
 
  $conexion= new PDO('sqlite:favoritos.db');
 
-$coonsultar="SELECT * FROM favoritos  WHERE usuario !='".$_SESSION['usuario']."'  AND categoria='".$damecategoria."' ORDER BY RAMDOM() LIMIT 3";
+$consultar="SELECT * FROM favoritos  WHERE usuario !='".$_SESSION['usuario']."'  AND categoria='".$damecategoria."' ORDER BY RAMDOM() LIMIT 3";
 
 $resultado=$conexion-> query($consultar);
 
