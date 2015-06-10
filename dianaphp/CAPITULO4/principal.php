@@ -105,4 +105,5 @@ muestracategoria("trabajo");
 muestracategoria("hobby");
 muestracategoria("personal");
 muestracategoria("otros");
+
 ?>
