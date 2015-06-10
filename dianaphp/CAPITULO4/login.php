@@ -15,6 +15,7 @@ $contraseña=$_POST['contraseña'];
 $usuariobd=$fila['usuario'];
 $contraseñabd=$fila['contraseña'];
 $permisosbd=$fila['permisos'];
+
 if ($usuario==$usuariobd & $contraseña==$contraseñabd) {
 
 $_SESSION['usuario']=$usuario;

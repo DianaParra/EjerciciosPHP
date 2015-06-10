@@ -9,8 +9,9 @@ $dia=date('d');
 $hora=date('H');
 $minuto=date('i');
 $segundo=date('s');
-$usuario=$_SESSION['usuario'];
+$usuariolog=$_SESSION['usuario'];
 $contraseñalog=$_SESSION['contraseña'];
+
 @$ip = getenv(REMOTE_ADDRS);
 $navegador=$_SERVER["HTTP_USER_AGENT"];
 

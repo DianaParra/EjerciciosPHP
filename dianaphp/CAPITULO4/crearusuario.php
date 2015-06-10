@@ -4,13 +4,13 @@ session_start();
 
 $contador = 0;
 
-$usuario=$_POST['usuario'];
-$contraseña=$_POST['contraseña'];
-$nombre=$_POST['nombre'];
-$apellido=$_POST['apellido'];
-$edad=$_POST['edad'];
+$usuario = $_POST['usuario'];
+$contraseña = $_POST['contraseña'];
+$nombre = $_POST['nombre'];
+$apellido = $_POST['apellido'];
+$edad = $_POST['edad'];
 
- $conexion= new PDO('sqlite:favoritos.db');
+ $conexion = new PDO('sqlite:favoritos.db');
 
 $consultar="SELECT * FROM usuarios";
 
@@ -18,7 +18,7 @@ $resultado = $conexion-> query($consultar);
 
 foreach ($resultado as $fila) {
 	
-	if ($fila['usuario']==$usuario) {
+	if ($fila['usuario'] == $usuario) {
 
  $contador++;
 

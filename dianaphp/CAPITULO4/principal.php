@@ -8,7 +8,7 @@ echo $_SESSION['usuario'];
 echo "<br>tu contraseña es:";
 echo $_SESSION['contraseña'];
 
-echo "<br>pulsa <a href='unlog.php'>aqiui</a>para cerrar tu secion<br/>";
+echo "<br>pulsa <a href='unlog.php'>aqui</a>para cerrar tu secion<br/>";
 
 //crear conexion
  $conexion= new PDO('sqlite:favoritos.db');
@@ -35,8 +35,7 @@ echo "<table border=1 width=1>
 
 foreach ($resultado as $fila) {
 	
-	echo "<tr><td>".$fila['titulo']."</td><td>".$fila['direccion']."</td><td>".$fila['categoria']."</td><td>".$fila['comentario']."</td><td>".$fila['valoracion']."</td><td><a href = 'eliminrfavorito.php?titulo=".$fila['titulo']."&direccion=".$fila['direccion']."&categoria=".$fila['categoria']."&comentario=".$fila['comentario']."&valoracion=".$fila['valoracion']."'>Eliminar</a>
-	</td><td><a href = 'formularioactualizar.php?titulo=".$fila['titulo']."&direccion=".$fila['direccion']."&categoria=".$fila['categoria']."&comentario=".$fila['comentario']."&valoracion=".$fila['valoracion']."'>Actualizar</a></td></tr>";
+	echo "<tr><td>".$fila['titulo']."</td><td>".$fila['direccion']."</td><td>".$fila['categoria']."</td><td>".$fila['comentario']."</td><td>".$fila['valoracion']."</td><td></td></tr>";
 }
 
 //añadir registro
@@ -73,7 +72,7 @@ echo "algunos link  de la categoria ".$damecategoria."que quizas te puedan inter
 
  $conexion= new PDO('sqlite:favoritos.db');
 
-$consultar="SELECT * FROM favoritos  WHERE usuario !='".$_SESSION['usuario']."'  AND categoria='".$damecategoria."' ORDER BY RAMDOM() LIMIT 3";
+$consultar="SELECT * FROM favoritos  WHERE usuario !='".$_SESSION['usuario']."'  AND categoria='".$damecategoria."' ORDER BY RANDOM() LIMIT 3";
 
 $resultado=$conexion-> query($consultar);
 

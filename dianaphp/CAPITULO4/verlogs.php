@@ -281,6 +281,7 @@ echo "</table>";
 //cerrar conexion
 
 $conexion=NULL;
+
 }else{
 
 	echo "tu no eres administrador";

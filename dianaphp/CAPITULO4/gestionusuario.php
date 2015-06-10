@@ -2,9 +2,10 @@
 
 session_start();
 
+
 $codigo= $_SESSION['permisos'];
 
-if ($codigo==1) {
+if ($codigo == 1) {
 	
 echo "tu usuario es:";
 echo $_SESSION['usuario'];
@@ -26,7 +27,7 @@ $resultado=$conexion-> query($consultar);
 echo "<table border=1 width=1>
 <tr>
 <td> usuario</td>
-<td>contraseña</td>
+<td>contrase&ntilde;a</td>
 <td>nombre</td>
 <td>apellido</td>
 <td>edad</td>

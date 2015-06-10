@@ -34,7 +34,7 @@ echo "algunos link  de la categoria que quizas te puedan interesar";
 
  $conexion = new PDO('sqlite:favoritos.db');
 
-$coonsultar="SELECT * FROM favoritos ORDER BY RAMDOM() LIMIT 3 ";
+$consultar="SELECT * FROM favoritos ORDER BY RANDOM() LIMIT 3 ";
 
 $resultado  = $conexion-> query($consultar);
 
@@ -49,7 +49,6 @@ echo "<table border=1 width=1>
 <td></td>
 </tr>
 ";
-
 
 foreach ($resultado as $fila) {
 	
