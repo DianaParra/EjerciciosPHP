@@ -14,9 +14,15 @@ $valoracion=$_POST['valoracion'];
 
 $tituloantiguo=$_SESSION['titulo'];
 
-$consultar="UPDATE favoritos SET titulo='".$titulo."'direccion='".$direccion."' categoria='".$categoria."' comentario='".$comentario."'valoracion='".$valoracion."'";
+$consultar="UPDATE favoritos SET
+ titulo='".$titulo."',
+ direccion='".$direccion."',
+ categoria='".$categoria."',
+ comentario='".$comentario."',
+ valoracion='".$valoracion."' WHERE titulo='".$tituloantiguo."'";
 
 $resultado=$conexion-> query($consultar);
+
 $conexion = NULL;
 echo '
 

@@ -3,7 +3,7 @@
 	session_start();
 
 	$usuario = $_SESSION['usuario'];
-	$contrasena = $_SESSION['contraseña'];
+	$contrasena = $_SESSION['contrasena'];
 
 	$titulo = $_GET['titulo'];
 	$direccion = $_GET['direccion'];
@@ -15,11 +15,11 @@
 	$conexion = new PDO('sqlite:favoritos.db');
 
 	
-	$consulta = "SELECT * FROM favoritos WHERE usuario='".$usuario."' AND contraseña='".$contrasena."' AND titulo='".$titulo."' 
+	$consulta = "SELECT * FROM favoritos WHERE usuario='".$usuario."' AND contrasena='".$contrasena."' AND titulo='".$titulo."' 
 	AND direccion='".$direccion."' AND categoria='".$categoria."' AND comentario='".$comentario."' AND valoracion='".$valoracion."'";
 
 	$resultado = $conexion-> query($consulta);
-//echo $resultado;
+
 	echo "
 
 		<table border=1 width=100%>
@@ -64,11 +64,10 @@
 		";
 	}
 
-echo "</table>";
+	echo "</table>";
 
-	$_SESSION['titulo']=$titulo;
+	$_SESSION['titulo'] = $titulo;
 
 	$conexion=NULL;
-
 
 ?>

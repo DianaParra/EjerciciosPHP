@@ -14,12 +14,12 @@ $contraseña=$_POST['contraseña'];
 
 $usuariobd=$fila['usuario'];
 $contraseñabd=$fila['contraseña'];
-
+$permisosbd=$fila['permisos'];
 if ($usuario==$usuariobd & $contraseña==$contraseñabd) {
 
 $_SESSION['usuario']=$usuario;
 $_SESSION['contraseña']=$contraseña;
-
+$_SESSION['permisos']=$permisosbd;
 echo '
 
 <html>

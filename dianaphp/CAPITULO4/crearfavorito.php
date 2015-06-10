@@ -15,10 +15,10 @@ $addcomentario = $_POST['comentario'];
 $addvaloracion = $_POST['valoracion'];
 
  $conexion= new PDO('sqlite:favoritos.db');
+
 $consultar = 
 "INSERT INTO favoritos VALUES
-('$usuario','$contrasena','$addtitulo','$adddireccion','$addcategoria','$addcomentario','$addvaloracion')
- ";
+('$usuario','$contrasena','$addtitulo','$adddireccion','$addcategoria','$addcomentario','$addvaloracion');";
 //ejecuto la consulta
 $resultado = $conexion-> exec($consultar);
 //cerrar coneccion
