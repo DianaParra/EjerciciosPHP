@@ -98,7 +98,9 @@ foreach ($resultado as $fila) {
 echo"</table>";
 
 $conexion=NULL;
+
 }
+
 
 muestracategoria("salud");
 muestracategoria("trabajo");
