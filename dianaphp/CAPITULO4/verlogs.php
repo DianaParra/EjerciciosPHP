@@ -15,6 +15,7 @@ echo $_SESSION['contraseña'];
  $conexion= new PDO('sqlite:favoritos.db');
 
 $consultar="SELECT * FROM logs";
+$resultado = $conexion-> query($consultar);
 
 $hora0=0; $hora1=0; $hora2=0; $hora3=0; $hora4=0; $hora5=0; $hora6=0;
 $hora7=0; $hora8=0; $hora9=0; $hora10=0; $hora11=0; $hora12=0; $hora13=0; 
@@ -147,6 +148,7 @@ if ($fila['hora']==24) {
 	
 	$hora24++;	
 }
+}
 /*
  echo "visitas en la hora 0:".$hora0."</br>";
  echo "visitas en la hora 1:".$hora1."</br>";
@@ -249,7 +251,7 @@ $conexion=NULL;
 
 //establecer consulta
 
-$consultar="SELECT * FROM logs";
+$consultar = "SELECT * FROM logs";
 
 //ejecutar consulta 
 $resultado=$conexion-> query($consultar);

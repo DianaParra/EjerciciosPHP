@@ -3,7 +3,7 @@
 session_start();
 
 
-$codigo= $_SESSION['permisos'];
+$codigo = $_SESSION['permisos'];
 
 if ($codigo == 1) {
 	
